@@ -58,13 +58,16 @@ void barabasiRavaszVicsek(int n) {
 
             // dodawanie nowej jednostki
             for (int wezel = 0; wezel < wielkoscJednostki; wezel++) {
-
                 listaSasiedztwa.push_back({});
-                int aktualnyWezel = wezel + przesuniecie;
+            }
 
+            for (int wezel = 0; wezel < wielkoscJednostki; wezel++) {
+
+                int aktualnyWezel = wezel + przesuniecie;
                 for (int sasiad = 0; sasiad < tempListaSasiedztwa[wezel].size(); sasiad++) {
 
                     int aktualnySasiad = tempListaSasiedztwa[wezel][sasiad] + przesuniecie;
+
                     listaSasiedztwa[aktualnyWezel].push_back(aktualnySasiad);
                     listaSasiedztwa[aktualnySasiad].push_back(aktualnyWezel);
 
@@ -84,6 +87,7 @@ void barabasiRavaszVicsek(int n) {
         dolneWezly = tempDolneWezly;
     }
 }
+
 
 int bfsOdleglosc(const vector<vector<int>>& listaSasiedztwa, int start) {
     int n = listaSasiedztwa.size();                   // liczba wierzchołków

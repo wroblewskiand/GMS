@@ -35,4 +35,5 @@
 *.sln
 *.vcxproj
 *.vcxproj.*
-
+GMS/
+x64/
