@@ -37,5 +37,6 @@
 *.vcxproj.*
 GMS/
 x64/
-message-01.txt
+message-01.cpp
+
 
