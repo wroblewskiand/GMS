@@ -266,8 +266,8 @@ void wypiszGraf(const vector<vector<int>>& graf) {
 //*
 int main() {
 
-    int a = 2;
-    int b = 2;
+    int a = 4;
+    int b = 1;
 
     WI(a, b);
  
@@ -277,10 +277,10 @@ int main() {
     // 
 
 
-    //int sumaCalkowita = 0;
-    //for (int i = 0; i < listaSasiedztwa.size(); ++i) {
-    //    sumaCalkowita += bfsOdleglosc(listaSasiedztwa, i);
-    //}
+    int sumaCalkowita = 0;
+    for (int i = 0; i < listaSasiedztwa.size(); ++i) {
+        sumaCalkowita += bfsOdleglosc(listaSasiedztwa, i);
+    }
 
     //Obliczanie sumy odległości między wszystkimi parami węzłów
     //int sumaOdleglosci = bfsOdleglosc(listaSasiedztwa, 0) ;
@@ -289,7 +289,7 @@ int main() {
     //    sumaOdleglosci += bfsOdleglosc(listaSasiedztwa, wezel);
     //}
 
-    //cout << a << ": " << sumaCalkowita/2 << endl;
+    cout << a << ": " << sumaCalkowita/2 << endl;
     wypiszGraf(listaSasiedztwa);
 
     return 0;
